@@ -18,9 +18,9 @@ if(isset($_POST['submit']))
       $product = ["name" => $name , 
                  "price" => $price , 
                 "qtt" => $qtt,
-                "total" =>$price * $qtt 
+                "total" =>$price*$qtt 
             ];
-      $_SESSION['products'][] =$product ;      
+      $_SESSION['products'][]<=$product ;      
    }
 
 }
