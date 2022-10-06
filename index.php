@@ -1,0 +1,45 @@
+<!-- 
+    Présentera un formulaire permettant de renseigner : 
+    o Le nom du produit 
+    o Son prix unitaire
+    o La quantité désirée 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout produit</title>
+</head>
+<body>
+    <h1>Ajouter un produit</h1>
+    <form action = "traitement.php" method ="post">
+        <p>
+            <label>
+                Nom du produit 
+                <input type="text" name ="name">
+            </label>
+       </p>
+       <p>
+         
+        <label>
+            prix du produit
+            <input type = "number" step="any" name ="price">
+        </label>
+        <label>
+            quantité desiree : 
+            <input type = "number" name=="qtt" value = "1">
+        </label>
+       </p>
+       <p>
+        <input tybe = "submit" name = "submit" value = "ajouter le produit" >
+
+
+       </p>
+    </form>
+    
+</body>
+</html>
