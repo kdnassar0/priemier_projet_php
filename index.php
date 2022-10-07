@@ -42,8 +42,9 @@
             </label>
        </p>
        
-        <input class='button' type = "submit" name = "submit" value =" Ajouter le produit" >
-           
+        
+       <input class='button' type = "submit" name = "submit" value =" Ajouter le produit" >
+        <input type="submit" name="deleteItem" value="Supprimer un produit" /></td>   
     </form>
     
 </body>
