@@ -15,7 +15,8 @@ session_start() ;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Récapitulatif des produits</title>
-    <style>table, th, td{border:1px solid;} </style>
+    <!-- <style>table, th, td{border:1px solid;} </style> -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -23,6 +24,7 @@ session_start() ;
    if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
     echo "<p>Aucan produit en session</p>" ;
    }else{
+    // echo "<table style='border : 1px solid'>",
     echo "<table style='border : 1px solid'>",
                 "<thead>",
                     "<tr>",
@@ -51,6 +53,10 @@ foreach($_SESSION['products'] as $index =>$product){
 
 }
    }
+//    echo "<tr>",
+//            "<td colspan=4>Total general : </td>"
+//            "<td><strong>" .number_format($totalGeneral, 2 "," , "&nbsp;"). "&nbsp;£</strong></td>",
+//         "</tr>" ,
     echo "</tbody>" ,"</table>" ;
 
  ?>

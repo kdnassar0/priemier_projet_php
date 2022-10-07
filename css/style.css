@@ -1,0 +1,18 @@
+table {
+   border-radius: 10px;  
+   margin-left: 400px;
+}
+
+th {
+padding: 10px;
+text-align: center;
+color: blueviolet;
+}
+
+
+td{
+    padding: 10px;
+    text-align: center;
+    color: red;
+}
+
