@@ -16,7 +16,7 @@
 </head>
 <body>
     <h1>Ajouter un produit</h1>
-    <form action="traitement.php" method="post">
+    <form action="traitement.php" method="post"> 
         <p>
             <label>
                 Nom du produit 
@@ -24,21 +24,18 @@
             </label>
        </p>
        <p>
-         
-        <label>
-            prix du produit
-            <input type = "number" step="any" name ="price">
-        </label>
-        <label>
-            quantité desiree : 
-            <input type = "number" name="qtt" value = "1">
-        </label>
+            <label>
+                    prix du produit
+                    <input type = "number" step="any" name ="price">
+            </label>
+            <label>
+                    quantité desiree : 
+                    <input type = "number" name="qtt" value = "1">
+            </label>
        </p>
        <p>
-        <input type = "submit" name = "submit" value = "ajouter le produit" >
-
-
-       </p>
+            <input type = "submit" name = "submit" value = "ajouter le produit" >
+      </p>
     </form>
     
 </body>
