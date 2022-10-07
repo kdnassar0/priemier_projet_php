@@ -7,6 +7,7 @@
 <?php 
 session_start() ; 
 ?>
+<a href="index.php">Revenir</a>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +61,9 @@ foreach($_SESSION['products'] as $index =>$product){
     echo "</tbody>" ,"</table>" ;
 
  ?>
+
+
+
     
 </body>
 </html>

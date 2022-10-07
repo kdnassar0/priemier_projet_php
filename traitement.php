@@ -26,7 +26,9 @@ if(isset($_POST['submit']))
 
 }
 
-header("LOCATION :index.php") ;
+
+
+header("LOCATION:index.php") ;
 
 
 ?>
