@@ -6,29 +6,63 @@
 <?php
 
 session_start() ; 
-if(isset($_POST['submit']))
-{
-    $name = filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING)  ;
-    $price = filter_input(INPUT_POST,"price",FILTER_VALIDATE_FLOAT,FILTER_FLAG_ALLOW_FRACTION);  ;
-    $qtt = filter_input(INPUT_POST,"qtt",FILTER_VALIDATE_INT)  ;
 
-    if($name && $price && $qtt)
+$action = $_GET["action"];
+$index = $_GET["index"] ;
 
-    {
-      $product = ["name" => $name , 
-                 "price" => $price , 
-                "qtt" => $qtt,
-                "total" =>$price*$qtt 
-            ];
-      $_SESSION['products'][] = $product ;      
+switch($action) {
+    case "ajouterPreduit":
+        if(isset($_POST['submit']))
+        {
+            $name = filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING)  ;
+            $price = filter_input(INPUT_POST,"price",FILTER_VALIDATE_FLOAT,FILTER_FLAG_ALLOW_FRACTION);  ;
+            $qtt = filter_input(INPUT_POST,"qtt",FILTER_VALIDATE_INT)  ;
 
-   }
+            if($name && $price && $qtt)
 
+            {
+            $product = ["name" => $name , 
+                        "price" => $price , 
+                        "qtt" => $qtt,
+                        // "total" =>$price*$qtt,
+                    ];
+            $_SESSION['products'][] = $product ;      
+
+        }
+
+        header("LOCATION:index.php") ;
+
+        }
+    break;
+
+    case "viderPanier":
+        unset($_SESSION["products"]);
+        header("LOCATION:recap.php") ;
+    break;
+
+    case "supprimerProduit":
+        unset($_SESSION["products"][$index]);
+        header("LOCATION:recap.php") ;
+
+    break;
+
+    case "upQauntite":
+        $_SESSION["products"][$index]["qtt"]++;
+    
+        header("Location:recap.php") ;
+    break;
+        
+
+    case "downQauntite":
+        $_SESSION["products"][$index]["qtt"]--;
+         header("location:recap.php") ;
+         if( $_SESSION["products"][$index]["qtt"]==0){
+            unset($_SESSION["products"][$index]) ;
+         }; 
+    
+
+    break;
 }
-
-
-
-header("LOCATION:index.php") ;
 
 
 ?>

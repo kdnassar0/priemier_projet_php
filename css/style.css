@@ -1,7 +1,6 @@
 table {
    border-radius: 10px;  
-   margin-left: 400px;
-
+ 
 }
 
 th {
@@ -17,6 +16,24 @@ color: blueviolet;
 td{
     padding: 10px;
     text-align: center;
-    color: red;
+    color : red ;
 }
 
+.button1{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+ 
+}
+
+.tableau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    
+  
+}

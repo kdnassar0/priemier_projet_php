@@ -21,7 +21,7 @@
 
     
     <h1>Ajouter un produit</h1>
-    <form action="traitement.php" method="post"> 
+    <form action="traitement.php?action=ajouterPreduit" method="post"> 
         <p>
             <label>
                    <span> Nom du produit</span> 
@@ -44,7 +44,7 @@
        
         
        <input class='button' type = "submit" name = "submit" value =" Ajouter le produit" >
-        <input type="submit" name="deleteItem" value="Supprimer un produit" /></td>   
+     
     </form>
     
 </body>
