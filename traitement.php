@@ -5,7 +5,8 @@
 -->
 <?php
 
-session_start() ; 
+session_start() ;
+include "function.php" ;
 
 $action = $_GET["action"];
 $index = $_GET["index"] ;
@@ -24,7 +25,7 @@ switch($action) {
             $product = ["name" => $name , 
                         "price" => $price , 
                         "qtt" => $qtt,
-                        // "total" =>$price*$qtt,
+                      
                     ];
             $_SESSION['products'][] = $product ;      
 
@@ -41,14 +42,14 @@ switch($action) {
     break;
 
     case "supprimerProduit":
-        unset($_SESSION["products"][$index]);
-        header("LOCATION:recap.php") ;
+       unset($_SESSION["products"][$index]);
+       affichage();
+        // header("LOCATION:recap.php") ;
 
     break;
 
     case "upQauntite":
         $_SESSION["products"][$index]["qtt"]++;
-    
         header("Location:recap.php") ;
     break;
         
@@ -63,6 +64,5 @@ switch($action) {
 
     break;
 }
-
 
 ?>

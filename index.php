@@ -31,14 +31,14 @@
        <p>
             <label>
                     <span>prix du produit</span>
-                    <input type = "number" step="any" name ="price">
+                    <input type = "number" step="any" min=0 name ="price">
             </label>
             
        </p>        
         <p>  
             <label>
                     <span>quantité desiree : </span>
-                    <input type = "number" name="qtt" value = "1">
+                    <input type = "number" name="qtt" min=1 value = "1">
             </label>
        </p>
        
